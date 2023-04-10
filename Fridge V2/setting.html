@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang= "en">
+    <head> 
+        <meta charset="UTF-8">
+        <title> Final Fridge App</title>
+    </head>
+
+    <style>
+        
+        .box {
+            text-align: center;
+			border: 6px solid black;
+			padding: 10px;
+			width: 900px;
+			height: 500px;
+		}
+
+    </style>
+
+
+    <body>
+        <div class="box">
+            <a href="finalfridgeapp.html">
+                <img src="download (4).png" alt="Button" id="image1" width=80px heigth=80px>  
+            </a>
+    
+            <h1>Show Fridge</h1>
+
+
+
+            <div id="buttons">
+                <input type=button onclick="button2()" id="button1" value="Open" >
+                <input type=button onclick="button3()" id="button2" value="Close">
+            </div>
+
+            <div id="div1" class="div-1" >
+                <img src="https://mobileimages.lowes.com/productimages/405de170-6148-424b-9e33-af14a455b132/15426295.jpg?size=pdhism"
+                     id="image2" width=250px heigth=250px>        
+            </div>
+        </div>
+    </body>
+
+
+        <script>
+
+
+
+                    function button2(){
+                        var pic=document.getElementById('image2');
+                        pic.src="https://www.sandravalvassori.com/wp-content/uploads/2021/04/2020-3260-6.jpg";
+
+                    }
+                    function button3(){
+                        var pic=document.getElementById('image2');
+                        pic.src="https://mobileimages.lowes.com/productimages/405de170-6148-424b-9e33-af14a455b132/15426295.jpg?size=pdhism";
+
+                    }
+
+        
+    </script>
+</html>

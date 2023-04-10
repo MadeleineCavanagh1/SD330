@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang= "en">
+    <head> 
+        <meta charset="UTF-8">
+        <title> Final Fridge App</title>
+    </head>
+
+
+    <style>
+        body {background-color: white;
+        padding: 100px 100px 100px 100px;  margin:auto;}
+
+    
+        .clock {
+                text-align: left;
+                font-size: 30px;
+                letter-spacing: 3px;
+        }
+        .button{
+            
+            text-align: left;
+            padding: 5px 5px 5px 5px;  margin:auto;
+        }
+        .floatRight{float: right; width:160px; padding: 35px 35px 35px 35px; margin:35px 35px 35px 35px; top: 30px;}
+        .floatLeft{float: left; width:160px;padding: 35px 35px 35px 35px; margin:35px 35px 35px 35px; }
+
+        .box {
+            text-align: center;
+			border: 6px solid black;
+			padding: 10px;
+			width: 900px;
+			height: 600px;
+		}
+
+
+    </style>
+
+    <body>
+    
+    <div class="box">
+
+        <div id="MyClockDisplay" class="clock" onload="showTime()">
+        </div>
+
+        <div id= "buttons" class="button">
+            Fridge Status: <input type=button onclick="button1()"  id="button1" value="OFF"; background-color= "blue">
+        </div>
+
+      
+            <h1>Tuesday, April 9th:  it is   <img src="download (2).png"> 46 &deg;F outside today</h1>
+    
+
+        <div id="homescreen" class= "home">
+            <div class="floatLeft" id="div-1">
+                <a href="timer.html">
+                    <img src="download.png" alt="Button" id="image1" width=160px heigth=160px>  
+                </a>
+                <a href="shoppinglistpage.html">
+                    <img src="Basic_Elements__28130_29.jpeg" alt="Button" id="image2" width=130px heigth=130px>
+                </a>
+            </div>  
+
+            <div class="floatRight" id="div-2">
+                <a href="setting.html">
+                    <img src="download (3).png" alt="Button" id="image3" width=120px heigth=120px>
+                </a>
+                <a href="calender.html">
+                        <img src="calender.jpeg" alt="Button" id="image4" width=140px heigth=140px>
+                    </a>
+                </div>
+
+
+            <div class="floatRight" id="div-3">
+                    <a href="tv.html">
+                        <img src="download (1).png" alt="Button" id="image5" width=150px heigth=150px>
+                    </a>
+
+                <a href="temperture.html">
+                        <img src="download4.png" alt="Button" id="image6" width=150px heigth=150px>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showTime(){
+                var date = new Date();
+                var h = date.getHours(); 
+                var m = date.getMinutes(); 
+                var s = date.getSeconds(); 
+                var session = "AM";
+                
+                if(h == 0){
+                    h = 12;
+                }
+                if(h > 12){
+                    h = h - 12;
+                    session = "PM";
+                }
+                h = (h < 10) ? "0" + h : h;
+                m = (m < 10) ? "0" + m : m;
+                s = (s < 10) ? "0" + s : s;
+                
+                var time = h + ":" + m + ":" + s + " " + session;
+                document.getElementById("MyClockDisplay").innerText = time;
+                document.getElementById("MyClockDisplay").textContent = time;
+                
+                setTimeout(showTime, 1000);
+            }
+            showTime();
+
+            function changeColor(){
+                document.getElementById('button1').style.backgroundColor="blue";
+            }
+
+            function changeColor2(){
+                document.getElementById('button1').style.backgroundColor="white";
+            }
+
+            function button1(){
+            but1=document.getElementById("button1")
+            if(but1.value =="OFF"){
+                but1.value ="ON";
+                changeColor(but1);
+                document.getElementById("homescreen");
+            }else{
+                but1.value="OFF";
+                changeColor(but1);
+               
+            }
+        }
+
+
+        </script>
+    
+    </body>
+
+
+</html>
