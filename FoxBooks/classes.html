@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <meta charset="UTF-8">
+    <head> 
+        <title>Classes</title>
+        <style>
+            @import url('style.css');
+        </style>    
+    </head>
+
+<body>
+    <div class="header">
+    
+
+        <div class="logo"> 
+    
+                <img src="company_logo.png" width="150" height="50">
+        </div>
+
+        <div class="logo2"> 
+    
+            <img src="logo-no-background.png" width="200" height="50">
+        </div>
+
+
+        <div class="affordances"> 
+    
+            <img src="search.png" width="20" height="20">
+            <input type="text" id="search" name="search">
+            <input type="submit" value="Search">
+            
+            <img src="bell.png" width="20" height="20">
+            <img src="menu.png" width="20" height="20">
+    </div>
+
+
+
+    <nav class="crumbs">
+        <ol id="crumbs-list">
+            <li class="crumb"><a href="FoxBooks.html">Home</a></li>
+            <li class="crumb"><a href="breadaccount.html">User Account</a></li>
+            
+            <li class="crumb"><a href="breadpassword.html">Password</a></li>
+    
+        </ol>
+    </nav>
+  
+
+
+        
+
+        <div class = "signin" >
+            <button type="button"><a href="">Sign in Here!</a></button>
+
+</body>
+
+<script>
+     async function getCourses() {
+        const response = await fetch("https://raw.githubusercontent.com/madeleinecavanagh1/SD330/main/FoxBooks/classes.json");
+    const data = await response.json();
+  
+    let coursesList = document.getElementById("coursesList");
+  
+    for (const courseName in data.courses) {
+      const course = data.courses[courseName];
+  
+      let courseItem = document.createElement("li");
+  
+      let courseDetails = document.createElement("ul");
+  
+      for (const key in course) {
+        let courseDetailItem = document.createElement("li");
+        courseDetailItem.innerHTML = "<b>" + key + ":</b> " + course[key];
+        courseDetails.appendChild(courseDetailItem);
+      }
+  
+      let courseLink = document.createElement("a");
+      courseLink.href = "book.html?course=" + encodeURIComponent(courseName);
+      courseLink.textContent = courseName;
+  
+      courseItem.appendChild(courseLink);
+      courseItem.appendChild(courseDetails);
+      coursesList.appendChild(courseItem);
+    }
+  }
+  
+  getCourses();
+
+</script>
+
+
+</html>
