@@ -1,54 +1,75 @@
-
 {
-"courseList" : [
-    {
-      "System Design":{
-      "CRN": "10487"   ,
-      "Time":  "MTh 2:00pm - 3:15pm"  ,
-      "Section": "330L",
-      "professor": "A.Tokash"  
-      }
-
-      
-    },
-    {
-      "Algorithms":{
-        "CRN":  "65433"  ,
-        "Time":  "WTh 3:15pm-4:45pm"  ,
+    "courses": [
+      {
+        "name": "System Design",
+        "CRN": "10487",
+        "Time": "MTh 2:00pm - 3:15pm",
+        "Section": "330L",
+        "professor": "A.Tokash",
+        "booksList": [
+          {
+            "title": "Design Principles",
+            "author": "Jacob Alorde",
+            "isbn": "6564378"
+          }
+        ]
+      },
+      {
+        "name": "Algorithms",
+        "CRN": "65433",
+        "Time": "WTh 3:15pm-4:45pm",
         "Section": "422L",
-        "Professor": "M.Johnson"  
-      }
-        
+        "Professor": "M.Johnson",
+        "booksList": [
+          {
+            "title": "Introduction to Algorithms",
+            "author": "Thomas Corman",
+            "isbn": "2345643"
+          }
+        ]
       },
-  
       {
-      "Intro to programming":{
-        "CRN":  "12344"  ,
-        "Time":  "M 6:00pm-9:00pm"  ,
+        "name": "Intro to programming",
+        "CRN": "12344",
+        "Time": "M 6:00pm-9:00pm",
         "Section": "201L",
-        "Professor": "C.Martensin"  
-      }
-        
+        "Professor": "C.Martensin",
+        "booksList": [
+          {
+            "title": "Intro to Python",
+            "author": "Mary Paul",
+            "isbn": "8765434"
+          }
+        ]
       },
-
       {
-      "Data communications":{
-        "CRN":  "87654"  ,
-        "Time":  "TTh 10:30am-11:45"  ,
+        "name": "Data communications",
+        "CRN": "87654",
+        "Time": "TTh 10:30am-11:45",
         "Section": "14356",
-        "Professor": "A.Tokash" 
-      }
-        
+        "Professor": "A.Tokash",
+        "booksList": [
+          {
+            "title": "Data communications",
+            "author": "Bill Gates",
+            "isbn": "87654345"
+          }
+        ]
       },
-
       {
-      "Software Development 1":{
-        "CRN":  "54356"  ,
-        "Time":  "M 6:00pm-9:00pm"  ,
+        "name": "Software Development 1",
+        "CRN": "54356",
+        "Time": "M 6:00pm-9:00pm",
         "Section": "10324",
-        "Professor": "J.Arias"  
+        "Professor": "J.Arias",
+        "booksList": [
+          {
+            "title": "Intro to Java",
+            "author": "Some Author",
+            "isbn": "65434523"
+          }
+        ]
       }
-        
-      }
-  ]
-}
+    ]
+  }
+  
