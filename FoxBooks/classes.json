@@ -1,0 +1,54 @@
+
+{
+"courseList" : [
+    {
+      "System Design":{
+      "CRN": "10487"   ,
+      "Time":  "MTh 2:00pm - 3:15pm"  ,
+      "Section": "330L",
+      "professor": "A.Tokash"  
+      }
+
+      
+    },
+    {
+      "Algorithms":{
+        "CRN":  "65433"  ,
+        "Time":  "WTh 3:15pm-4:45pm"  ,
+        "Section": "422L",
+        "Professor": "M.Johnson"  
+      }
+        
+      },
+  
+      {
+      "Intro to programming":{
+        "CRN":  "12344"  ,
+        "Time":  "M 6:00pm-9:00pm"  ,
+        "Section": "201L",
+        "Professor": "C.Martensin"  
+      }
+        
+      },
+
+      {
+      "Data communications":{
+        "CRN":  "87654"  ,
+        "Time":  "TTh 10:30am-11:45"  ,
+        "Section": "14356",
+        "Professor": "A.Tokash" 
+      }
+        
+      },
+
+      {
+      "Software Development 1":{
+        "CRN":  "54356"  ,
+        "Time":  "M 6:00pm-9:00pm"  ,
+        "Section": "10324",
+        "Professor": "J.Arias"  
+      }
+        
+      }
+  ]
+}
